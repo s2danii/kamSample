@@ -1,0 +1,134 @@
+.team {
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+.teamPhotos {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin: 40px auto;
+
+    @media (max-width: 700px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 400px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.photo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        width: calc((100% - 90px) / 4);
+        
+    }
+
+    h4 {
+        font-size: 1.4rem;
+        padding-bottom: 0;
+    }
+    
+    p {
+        color: $primaryColor;
+        font-size: 1.2rem;
+        padding: 10px 0;
+        
+    }
+
+    a {
+        color: $primaryColor; 
+    }
+
+    .resume {
+        font-size: 2rem;
+    }
+
+    img {
+        box-shadow: 1px 2px 5px rgba(170, 170, 170, 0.8);
+        
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            flex-shrink: 0;
+        }
+
+        &:hover {
+            box-shadow: 1px 2px 8px rgba(131, 131, 131, 0.9);
+        }
+    }
+}
+
+.clickedBio.resume {
+    color: rgb(181, 194, 214);
+}
+
+.bioSection {
+    background: rgb(240, 240, 240);
+    
+    .wrapper {
+        width: 60%;
+    }
+}
+
+.bio {
+    text-align: left;    
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s;
+    
+    h4 {
+        padding: 50px 0 0;
+    }
+
+    h4 + p {
+        font-size: 1.6rem;
+        color: $primaryColor;
+    }
+
+    p {
+        font-size: 1.4rem;
+        padding: 10px 0;
+        line-height: 1.6rem;
+        text-align: left;
+    }
+
+    p:last-of-type {
+        padding-bottom: 50px;
+    }
+}
+
+.resume {
+    cursor: pointer;
+    
+    &:hover {
+        transform: scale(1.3);
+    }
+}
+
+.seeInfo.bio {
+    opacity: 1;
+    height: auto;
+}
+
+.learnMore {
+    padding: 20px 0;
+    color: $primaryColor;
+    
+    i {
+        padding: 0 10px;
+    }
+}

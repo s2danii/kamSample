@@ -1,0 +1,126 @@
+$primaryColor: rgb(59, 104, 167);
+$accentColor: rgb(50, 50, 50);
+$grey: rgb(104, 104, 104);
+$background: rgb(245, 245, 245);
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3, 
+h4,
+h5,
+div,
+ul,
+p {
+    margin: 0; 
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    @media (max-width: 900px) {
+        width: 90%;
+    }
+}
+
+p {
+    font-size: 1.6rem;
+    text-align: center;
+    color: rgb(78, 78, 78);
+}
+
+
+h2,
+h3 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    padding: 30px 0 20px;
+}
+
+h3 {
+    font-weight: 500;
+    color: $grey;
+    font-size: 1.4rem;
+}
+
+h4 {
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    padding: 20px 0;
+
+}
+
+footer {
+    background: rgb(221, 221, 221);
+    text-align: center;
+    padding: 10px 0;
+
+    p {
+        font-size: 1.2rem;
+    }
+    
+}
+
+section {
+    padding: 60px 0 50px;
+    
+}
+
+h2 + p {
+    padding-bottom: 40px;
+    font-size: 1.4rem;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: $primaryColor;
+    margin: 15px auto;
+}
+
+.backup {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    font-size: 3.2rem;
+    padding: 10px 15px;
+    border-radius: 50%;
+    border: none;
+    color: $primaryColor;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    *::-ms-backdrop, [data-aos^=fade][data-aos^=fade]{
+        opacity: 1;
+    }
+}
