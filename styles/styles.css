@@ -336,6 +336,11 @@ nav ul {
   width: 150px;
 }
 
+.socials p {
+  text-align: left;
+  color: white;
+}
+
 .navBar {
   background: white;
   text-transform: uppercase;
@@ -967,18 +972,28 @@ header {
 
 .cd-author-img {
   border-radius: 50%;
-  padding: 10px;
   margin-right: 5px;
   background: white;
   border: 1px solid #686868;
   display: inline-block;
+  overflow: hidden;
 }
 
 .cd-author-img img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+}
+
+.cd-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cd-author .cd-author-info {
